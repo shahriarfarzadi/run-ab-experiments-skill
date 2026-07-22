@@ -30,12 +30,14 @@ def included_files() -> list[Path]:
 def add_file(archive: zipfile.ZipFile, path: Path, prefix: str) -> None:
     relative = path.relative_to(ROOT).as_posix()
     info = zipfile.ZipInfo(f"{prefix}/{relative}", FIXED_TIMESTAMP)
-    info.compress_type = zipfile.ZIP_DEFLATED
+    # Store bytes without compression so archives remain identical across
+    # platforms with different zlib versions.
+    info.compress_type = zipfile.ZIP_STORED
     info.create_system = 3
     executable = relative == "install.sh" or relative.endswith(".py")
     mode = 0o755 if executable else 0o644
     info.external_attr = (0o100000 | mode) << 16
-    archive.writestr(info, path.read_bytes(), compresslevel=9)
+    archive.writestr(info, path.read_bytes())
 
 
 def main() -> None:
