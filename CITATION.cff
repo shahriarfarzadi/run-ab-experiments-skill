@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this skill, please cite the software and its source book."
+type: software
+title: "Run A/B Experiments"
+abstract: >-
+  A question-first Agent Skill for planning, managing, intervening in, and
+  interpreting trustworthy online controlled experiments with explicit
+  assumption and cognitive-load controls.
+authors:
+  - family-names: "Farzadi"
+    given-names: "Shahriar"
+repository-code: "https://github.com/shahriarfarzadi/run-ab-experiments-skill"
+url: "https://github.com/shahriarfarzadi/run-ab-experiments-skill"
+version: 1.2.0
+date-released: 2026-07-22
+license: MIT
+keywords:
+  - A/B testing
+  - online controlled experiments
+  - agent skills
+  - experimentation
+  - cognitive load
+preferred-citation:
+  type: software
+  title: "Run A/B Experiments"
+  authors:
+    - family-names: "Farzadi"
+      given-names: "Shahriar"
+  version: 1.2.0
+  date-released: 2026-07-22
+  url: "https://github.com/shahriarfarzadi/run-ab-experiments-skill"

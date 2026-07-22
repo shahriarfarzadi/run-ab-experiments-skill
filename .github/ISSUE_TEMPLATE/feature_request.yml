@@ -1,0 +1,38 @@
+name: Feature request
+description: Propose a focused workflow, method, or compatibility improvement.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and decision affected
+      description: What failure or unnecessary cognitive load does this address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Explain the smallest change that solves the problem.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Book chapter or primary source
+      description: Required for substantive statistical or lifecycle guidance.
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Tradeoffs and cognitive-load impact
+      description: What becomes clearer, longer, stricter, or deferred?
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues and pull requests.
+          required: true

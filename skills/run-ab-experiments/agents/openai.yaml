@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trustworthy A/B Experiments"
+  short_description: "Question-first A/B test lifecycle control"
+  default_prompt: "Use $run-ab-experiments to question assumptions, then plan, manage, and interpret this A/B test end to end."
