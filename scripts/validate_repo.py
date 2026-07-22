@@ -13,6 +13,7 @@ SKILL_FILE = SKILL / "SKILL.md"
 NAME_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 VERSION_PATTERN = re.compile(r"^\d+\.\d+\.\d+$")
 LINK_PATTERN = re.compile(r"\]\(([^)]+)\)")
+EMAIL_PATTERN = re.compile(r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b", re.I)
 
 
 def require(condition: bool, message: str) -> None:
@@ -66,6 +67,39 @@ def validate_links() -> None:
                     f"broken link in {markdown.relative_to(ROOT)}: {raw_target}")
 
 
+def validate_portability() -> None:
+    """Reject identity, machine, repository, or secret context in the skill."""
+    forbidden_patterns = {
+        "macOS personal path": re.compile(r"/Users/", re.I),
+        "Linux personal path": re.compile(r"/home/[^/\s]+/", re.I),
+        "Windows personal path": re.compile(r"[A-Z]:\\\\Users\\\\", re.I),
+        "local file URL": re.compile(r"file://", re.I),
+        "repository-specific context": re.compile(r"\b(?:github|gitlab)\b", re.I),
+        "harness-specific context": re.compile(
+            r"\b(?:codex|claude code|antigravity|agy)\b", re.I
+        ),
+        "author identity": re.compile(r"\b(?:shahriar|farzadi)\b", re.I),
+        "likely credential": re.compile(
+            r"\b(?:api[_-]?key|access[_-]?token|client[_-]?secret|password)\b",
+            re.I,
+        ),
+    }
+    violations: list[str] = []
+    for path in SKILL.rglob("*"):
+        if not path.is_file():
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            continue
+        if EMAIL_PATTERN.search(text):
+            violations.append(f"email address: {path.relative_to(ROOT)}")
+        for label, pattern in forbidden_patterns.items():
+            if pattern.search(text):
+                violations.append(f"{label}: {path.relative_to(ROOT)}")
+    require(not violations, "non-portable skill context found: " + "; ".join(violations))
+
+
 def validate_repository() -> None:
     required = [
         ROOT / "README.md",
@@ -115,6 +149,7 @@ def main() -> None:
     validate_repository()
     validate_frontmatter()
     validate_links()
+    validate_portability()
     print("Repository contract passed.")
 
 

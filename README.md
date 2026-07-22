@@ -27,6 +27,19 @@ The workflow enforces five behaviors:
 5. Reduce cognitive load with one active decision, explicit deferrals, and
    concise stage gates.
 
+## General by design
+
+The installable skill contains no company, product, repository, experiment,
+dataset, traffic, baseline, metric-catalog, or decision context. It also
+contains no personal path, private URL, email, credential, or experiment ID.
+
+All test-specific context must enter through the mandatory interview and then
+be classified as a confirmed fact, approved assumption, proposed assumption,
+unknown, or contradiction. Generic examples and conventional statistical
+values are labeled as examples or proposals; they are never silent defaults.
+CI scans the packaged skill for environment-specific and identity-specific
+content on every change.
+
 ## Install
 
 ### Option 1: install directly from GitHub
