@@ -46,8 +46,10 @@ Do not repeat these numbers below. Use the detailed sections only as evidence.
 | Contamination/carryover | pass/fail |  |  |  |
 | Shared-resource/interference risk | pass/fail |  |  |  |
 
-If a required trust check fails, stop here, mark the outcome **invalid**, and
-document the debugging and rerun plan.
+If a required trust check fails, pause outcome interpretation here and mark the
+outcome **invalid**. State which decision this protects and the shortest
+responsible recovery step. Do not reveal or interpret decision metrics until
+the failure is resolved.
 
 ## Exposure and sample
 

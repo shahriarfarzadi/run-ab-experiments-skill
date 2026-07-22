@@ -80,6 +80,8 @@ Do not treat these as facts.
 
 ## Confirmation request
 
-Please correct anything inaccurate, answer any remaining blocking item, and
-reply **“Confirmed, proceed”** when this register accurately represents the
-experiment and the authorized scope.
+Please take a quick look at the register. Short corrections are enough, and an
+`unknown` is useful when evidence is not available. Please answer any remaining
+blocking item, then reply **“Confirmed, proceed”** when this accurately
+represents the experiment and the authorized scope. After that, I will begin
+only the confirmed next phase.

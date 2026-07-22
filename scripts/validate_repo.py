@@ -53,6 +53,25 @@ def validate_frontmatter() -> None:
     require(len(text.splitlines()) < 500, "SKILL.md must stay below 500 lines")
 
 
+def validate_facilitation_contract() -> None:
+    skill_text = SKILL_FILE.read_text(encoding="utf-8")
+    question_bank = (
+        SKILL / "references" / "discovery-question-bank.md"
+    ).read_text(encoding="utf-8")
+    require("## Facilitation voice and tone" in skill_text,
+            "SKILL.md is missing the facilitation voice contract")
+    require("warmth must never soften" in skill_text.lower(),
+            "the facilitation contract must preserve firm validity conclusions")
+    normalized_bank = " ".join(question_bank.split())
+    require(
+        "**Needed now**" in normalized_bank
+        and "**Answer if known**" in normalized_bank,
+        "the question bank must distinguish current from deferrable load",
+    )
+    require("one main thing per question" in question_bank.lower(),
+            "the question bank must limit each question's cognitive load")
+
+
 def validate_links() -> None:
     for markdown in SKILL.rglob("*.md"):
         text = markdown.read_text(encoding="utf-8")
@@ -148,6 +167,7 @@ def validate_repository() -> None:
 def main() -> None:
     validate_repository()
     validate_frontmatter()
+    validate_facilitation_contract()
     validate_links()
     validate_portability()
     print("Repository contract passed.")

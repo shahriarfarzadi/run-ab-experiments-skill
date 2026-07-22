@@ -3,6 +3,24 @@
 All notable changes to this project are documented here. The project follows
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-07-22
+
+### Added
+
+- Warm, empathetic coaching voice across discovery, confirmation, failed gates,
+  and next-step guidance.
+- Question-priority labels that separate what is needed now from what can be
+  answered later or marked unknown.
+- CI regression checks for the facilitation and cognitive-load contract.
+
+### Changed
+
+- Reframed adversarial design checks as respectful stress tests.
+- Limited each discovery question to one main idea while preserving precise
+  definitions, thresholds, owners, timestamps, and validity gates.
+- Required every hard pause to explain its reason, protected decision, and
+  shortest responsible recovery step.
+
 ## [1.2.0] - 2026-07-22
 
 ### Added
@@ -36,6 +54,7 @@ All notable changes to this project are documented here. The project follows
 - Initial trustworthy online controlled experiment workflow grounded in
   Kohavi, Tang, and Xu.
 
+[1.3.0]: https://github.com/shahriarfarzadi/run-ab-experiments-skill/releases/tag/v1.3.0
 [1.2.0]: https://github.com/shahriarfarzadi/run-ab-experiments-skill/releases/tag/v1.2.0
 [1.1.0]: https://github.com/shahriarfarzadi/run-ab-experiments-skill/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/shahriarfarzadi/run-ab-experiments-skill/releases/tag/v1.0.0

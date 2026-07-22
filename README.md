@@ -4,7 +4,7 @@
 [![Release](https://img.shields.io/github/v/release/shahriarfarzadi/run-ab-experiments-skill)](https://github.com/shahriarfarzadi/run-ab-experiments-skill/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A question-first Agent Skill for planning, managing, intervening in, and
+A calm, question-first Agent Skill for planning, managing, intervening in, and
 interpreting trustworthy online controlled experiments.
 
 It turns experiment context into explicit facts, assumptions, unknowns, and
@@ -18,13 +18,15 @@ an ambiguous population, a weak metric, an unlogged exposure, a hidden
 interference path, or an improvised stopping rule. This skill makes those
 assumptions visible before they can silently determine the answer.
 
-The workflow enforces five behaviors:
+The workflow enforces six behaviors:
 
 1. Ask high-impact questions before planning or analysis.
 2. Confirm a context-and-assumptions register before work starts.
 3. Separate design, live-operation, inference, and business decisions.
 4. Check trust failures such as sample ratio mismatch before reading outcomes.
-5. Reduce cognitive load with one active decision, explicit deferrals, and
+5. Use the warm, non-blaming voice of a seasoned experimentation coach while
+   keeping validity conclusions firm.
+6. Reduce cognitive load with one active decision, explicit deferrals, and
    concise stage gates.
 
 ## General by design
@@ -90,13 +92,13 @@ the extracted directory.
 macOS:
 
 ```sh
-shasum -a 256 -c run-ab-experiments-bundle-v1.2.0.zip.sha256
+shasum -a 256 -c run-ab-experiments-bundle-v1.3.0.zip.sha256
 ```
 
 Linux:
 
 ```sh
-sha256sum -c run-ab-experiments-bundle-v1.2.0.zip.sha256
+sha256sum -c run-ab-experiments-bundle-v1.3.0.zip.sha256
 ```
 
 ## Use
