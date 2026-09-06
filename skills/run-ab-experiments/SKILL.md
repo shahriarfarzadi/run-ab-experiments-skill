@@ -181,6 +181,9 @@ the user focused on the current decision.
      [references/experiment-design.md](references/experiment-design.md) and
      [references/analysis-and-trust.md](references/analysis-and-trust.md), then
      use [assets/analysis-report-template.md](assets/analysis-report-template.md).
+     When the decision depends on scaled impact, costs, capacity, opportunity
+     cost, or rollout scenarios, also read
+     [references/business-case.md](references/business-case.md).
    - **Platform or methodology audit:** read both references and report failed
      gates before recommendations.
 2. Inspect available specifications, event schemas, queries, dashboards, and
@@ -351,7 +354,12 @@ Manage the live experiment without contaminating the confirmatory question.
 10. Compare the confidence interval with the practical threshold and each
     guardrail. Distinguish “evidence of no meaningful effect” from “not enough
     evidence.”
-11. Produce the analysis-report template and one decision status: **ship**,
+11. When the decision requires a business case, translate the trustworthy
+    absolute effect to the target population, construct a reconciled scenario
+    ledger, separate absolute from incremental value, and test sensitivity and
+    break-even conditions. Keep actors, events, transactions, and outcomes
+    distinct; never invent a domain value or conversion between them.
+12. Produce the analysis-report template and one decision status: **ship**,
     **do not ship**, **iterate/replicate**, **inconclusive**, or **invalid**.
 
 Present the analysis in exactly this order:
@@ -359,8 +367,9 @@ Present the analysis in exactly this order:
 1. **Validity:** Can the causal estimate be trusted?
 2. **Effect:** What changed, with arm values, absolute/relative effect, and CI?
 3. **Practical meaning:** Does the interval cross benefit or harm thresholds?
-4. **Decision:** Which predeclared action follows?
-5. **Next action:** Who does what, by when, at which gate?
+4. **Business case:** What scaled impact and scenario value follow, when needed?
+5. **Decision:** Which predeclared action follows?
+6. **Next action:** Who does what, by when, at which gate?
 
 ## Non-negotiable trust rules
 
@@ -383,6 +392,12 @@ Present the analysis in exactly this order:
   or repeated iterations.
 - Never claim generalization beyond the tested population and period without
   evidence.
+- Never turn an actor-level effect into an event, transaction, or outcome count
+  without a measured or explicit mapping.
+- Never call a scenario better because its standalone value is positive; compare
+  its incremental value with the named baseline over the same scope and period.
+- Never treat response, adoption, or observed take-up as incremental causal
+  impact without accounting for counterfactual behavior and displacement.
 - Replicate unusually large wins with fresh or orthogonal randomization.
 
 ## Output standard
@@ -397,7 +412,7 @@ Present the analysis in exactly this order:
   clearly labeled appendix.
 - Do not repeat the same metric, caveat, or rationale in multiple sections.
 - For analysis, use the fixed order: validity, effect, practical meaning,
-  decision, next action.
+  business case when needed, decision, next action.
 - Separate observed facts, calculations, assumptions, and recommendations.
 - Show formulas or commands for computed quantities and preserve their inputs.
 - State limitations and the next action required to reduce uncertainty.

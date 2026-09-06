@@ -133,6 +133,20 @@ post-test work.
 20. What is the smallest benefit worth acting on and the largest acceptable harm
     for each veto guardrail? Who approved those thresholds?
 
+### Scale and decision value
+
+1. What population, volume, period, adoption policy, and implementation level
+   would the decision apply to beyond the experiment?
+2. What experiment outcome maps to the valued real-world outcome? Are they the
+   same entity and unit, or is a measured conversion needed between actors,
+   events, transactions, or other outcomes?
+3. Which benefits, variable costs, fixed costs, displaced value, opportunity
+   costs, capacity limits, and nonfinancial consequences differ by action?
+4. What is the baseline scenario, which alternatives are feasible, and what
+   willingness-to-pay or break-even threshold will choose among them?
+5. Could the intervention subsidize, displace, or cannibalize behavior that
+   would have happened anyway? What evidence or sensitivity range can bound it?
+
 ### Risk, ethics, and governance
 
 21. What physical, psychological, social, financial, privacy, fairness, or
@@ -309,6 +323,19 @@ data only after the context register is confirmed.
     versions were searched before presenting the reported finding?
 16. What was the planned and achieved minimum detectable effect or power at the
     actual analyzed sample size?
+
+### Business case and rollout translation
+
+1. What exact target population, operating volume, adoption/exposure level, and
+   time horizon should the experiment effect be scaled to?
+2. Does the experiment estimate actors, events, transactions, or another
+   outcome? What observed mapping is required before valuing a different unit?
+3. For the baseline and each feasible action, what are the cash, accounting,
+   contribution, fixed, variable, displaced, and opportunity-cost components?
+4. Which values are observed, user-confirmed, derived, assumed, or unknown, and
+   what ranges are credible for sensitivity analysis?
+5. What natural progression, cannibalization, capacity, equilibrium, or
+   implementation difference could make full rollout differ from the test?
 
 ### Data integrity and interpretation
 

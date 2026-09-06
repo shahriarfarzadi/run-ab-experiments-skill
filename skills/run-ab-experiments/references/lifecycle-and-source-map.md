@@ -94,7 +94,7 @@ changes.
 | 8. MPR measurement | Is planned evidence accumulating validly? | Stable allocation, batch validity, horizon progress | Control board | Ch. 15–18, 20–21 |
 | 9. Post-MPR | Is capacity or long-term learning required? | Primary measurement complete; added phase justified | Control board | Ch. 15, 23 |
 | 10. Interpret | Are results valid and decision-relevant? | Trust → effect → practical threshold → guardrails | Analysis report | Ch. 2–3, 17–23 |
-| 11. Decide | Which predeclared action follows? | Decision owner accepts evidence and limits | Analysis report | Ch. 2–3, 7 |
+| 11. Decide | Which predeclared action follows? | Decision owner accepts evidence, scaled impact or explicitly N/A business case, and limits | Analysis report | Ch. 2–3, 7; external decision-accounting method |
 | 12. Close and learn | What must be cleaned up and retained? | Code/config cleanup; institutional record complete | Institutional record | Ch. 4, 8, 15, 23 |
 
 At each stage:
@@ -214,9 +214,13 @@ Interpret mode covers stages 10–12.
    absolute/relative effects, uncertainty, and adjusted inference.
 3. **Practical meaning:** compare the entire interval with benefit and harm
    thresholds; include guardrails and total-population impact.
-4. **Decision:** apply the predeclared rule. Use only ship, do not ship,
+4. **Business case when needed:** translate the compatible absolute effect to
+   the target population; reconcile baseline and alternative scenarios; keep
+   actors, events, and outcomes distinct; separate absolute from incremental
+   value; and test sensitivity and break-even conditions.
+5. **Decision:** apply the predeclared rule. Use only ship, do not ship,
    iterate/replicate, inconclusive, or invalid.
-5. **Next action:** assign rollout, rollback, replication, further data,
+6. **Next action:** assign rollout, rollback, replication, further data,
    long-term measurement, cleanup, and recordkeeping.
 
 ### Concise analysis output
@@ -227,6 +231,7 @@ Keep the main result to one screen when possible:
 Validity: Valid / At risk / Invalid — one reason
 Effect: [absolute and relative effect, CI, unit, population, window]
 Practical meaning: [threshold comparison and guardrail result]
+Business case: [N/A, or scaled impact, incremental value, range, break-even]
 Decision: [one status]
 Next action: [owner, action, deadline]
 Load: [rating, cause, reduction/deferment]
@@ -267,6 +272,11 @@ Return to discovery and confirmation whenever a new request changes the
 decision, population, estimand, metric meaning, or authorized scope.
 
 ## Book chapter map
+
+The experiment-validity and causal-inference workflow is grounded in the book
+map below. The scenario-ledger, cost taxonomy, and break-even conventions in
+`business-case.md` are an external, industry-neutral decision-accounting layer;
+do not attribute those formulas to the book.
 
 Use these anchors to check that advice remains source-grounded:
 

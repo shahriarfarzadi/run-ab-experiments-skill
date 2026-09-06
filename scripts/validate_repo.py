@@ -130,6 +130,7 @@ def validate_repository() -> None:
         SKILL / "references" / "discovery-question-bank.md",
         SKILL / "references" / "experiment-design.md",
         SKILL / "references" / "analysis-and-trust.md",
+        SKILL / "references" / "business-case.md",
         SKILL / "references" / "lifecycle-and-source-map.md",
     ]
     for path in required:

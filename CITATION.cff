@@ -11,7 +11,7 @@ authors:
     given-names: "Shahriar"
 repository-code: "https://github.com/shahriarfarzadi/run-ab-experiments-skill"
 url: "https://github.com/shahriarfarzadi/run-ab-experiments-skill"
-version: 1.4.0
+version: 1.5.0
 date-released: 2026-09-06
 license: MIT
 keywords:
@@ -26,6 +26,6 @@ preferred-citation:
   authors:
     - family-names: "Farzadi"
       given-names: "Shahriar"
-  version: 1.4.0
+  version: 1.5.0
   date-released: 2026-09-06
   url: "https://github.com/shahriarfarzadi/run-ab-experiments-skill"

@@ -3,6 +3,24 @@
 All notable changes to this project are documented here. The project follows
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.0] - 2026-09-06
+
+### Added
+
+- Domain-neutral experiment-to-business-case reference for scaling trustworthy
+  causal effects into reconciled rollout scenarios.
+- Explicit absolute-versus-incremental value, cost taxonomy, cannibalization,
+  sensitivity, break-even, and unit-mapping checks.
+- Business-case intake questions and an optional scenario section in the
+  analysis report.
+
+### Changed
+
+- Interpret mode now inserts a business-case gate before the final decision
+  when costs, capacity, opportunity cost, or rollout alternatives matter.
+- Clarified that decision-accounting formulas are an external methodology and
+  are not attributed to the source book.
+
 ## [1.4.0] - 2026-09-06
 
 ### Changed
@@ -63,6 +81,7 @@ All notable changes to this project are documented here. The project follows
 - Initial trustworthy online controlled experiment workflow grounded in
   Kohavi, Tang, and Xu.
 
+[1.5.0]: https://github.com/shahriarfarzadi/run-ab-experiments-skill/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/shahriarfarzadi/run-ab-experiments-skill/releases/tag/v1.4.0
 [1.3.0]: https://github.com/shahriarfarzadi/run-ab-experiments-skill/releases/tag/v1.3.0
 [1.2.0]: https://github.com/shahriarfarzadi/run-ab-experiments-skill/releases/tag/v1.2.0
