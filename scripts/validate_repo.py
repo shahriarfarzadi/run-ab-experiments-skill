@@ -62,14 +62,14 @@ def validate_facilitation_contract() -> None:
             "SKILL.md is missing the facilitation voice contract")
     require("warmth must never soften" in skill_text.lower(),
             "the facilitation contract must preserve firm validity conclusions")
-    normalized_bank = " ".join(question_bank.split())
-    require(
-        "**Needed now**" in normalized_bank
-        and "**Answer if known**" in normalized_bank,
-        "the question bank must distinguish current from deferrable load",
-    )
     require("one main thing per question" in question_bank.lower(),
             "the question bank must limit each question's cognitive load")
+    require("exactly three" in question_bank.lower(),
+            "the question bank must require a three-question first turn")
+    require("read all context" in question_bank.lower(),
+            "the question bank must read supplied context before interviewing")
+    require("smallest next batch" in question_bank.lower(),
+            "the question bank must stage supplementary questions")
 
 
 def validate_links() -> None:
