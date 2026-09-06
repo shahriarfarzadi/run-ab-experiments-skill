@@ -17,6 +17,8 @@ again before interpreting results.
 - **Validity:** valid / at risk / invalid — [one reason]
 - **Effect:** [absolute and relative effect, CI, unit, population, window]
 - **Practical meaning:** [benefit/harm threshold and guardrail comparison]
+- **Business case:** [N/A, or scaled impact, incremental value versus baseline,
+  range, and break-even condition]
 - **Decision:** ship / do not ship / iterate or replicate / inconclusive / invalid
 - **Next action:** [owner, action, deadline, next gate]
 - **Cognitive load:** low / medium / high — [cause and reduction/deferment]
@@ -83,6 +85,30 @@ the failure is resolved.
 
 Label every unplanned metric, segment, filter, or model as exploratory and state
 the enlarged search space.
+
+## Business case and scenario translation
+
+Complete this section when the decision depends on scaled impact, costs,
+capacity, opportunity cost, or alternative rollout policies. Otherwise state
+why practical thresholds are sufficient and mark it N/A.
+
+- Target population, period, and implementation policy:
+- Effect used and estimand compatibility:
+- Mapping between analysis units and valued outcomes:
+- Operating inputs with source and as-of period:
+
+| Scenario | Target units | Incremental outcomes | Benefits | Cash/fixed costs | Displaced/opportunity value | Absolute value | Incremental value vs baseline |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Baseline |  | — |  |  |  |  | — |
+| Alternative |  |  |  |  |  |  |  |
+
+- Causal uncertainty range:
+- Business-input uncertainty range:
+- Natural progression, displacement, or cannibalization:
+- Capacity, equilibrium, and external-validity limits:
+- Break-even input or effect:
+- Cost per incremental outcome and willingness-to-pay threshold, if applicable:
+- Decision-reversing assumption:
 
 ## Decision application and next action
 

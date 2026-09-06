@@ -29,6 +29,9 @@ The workflow enforces six behaviors:
    keeping validity conclusions firm.
 6. Reduce cognitive load with one active decision, explicit deferrals, and
    concise stage gates.
+7. When the decision requires it, translate a trustworthy causal effect into a
+   domain-neutral scenario ledger with scaled impact, incremental value,
+   sensitivity, and break-even conditions.
 
 ## General by design
 
@@ -122,7 +125,7 @@ The skill intentionally does **not** analyze immediately. Its protocol is:
 | --- | --- | --- |
 | Plan | Decision-grade experiment plan | Design, readiness, and load review |
 | Manage/intervene | Updated experiment control board | Validity-preserving run decision |
-| Interpret/analyze | Trust audit, estimates, and decision | Integrity checks before outcomes |
+| Interpret/analyze | Trust audit, estimates, optional business case, and decision | Integrity checks before outcomes |
 
 The included calculator supports transparent fixed-horizon sample-size,
 independent-arm mean-effect, and SRM calculations. It is deliberately narrow;
@@ -140,7 +143,7 @@ skills/run-ab-experiments/
 ├── SKILL.md                 Core protocol and lifecycle routing
 ├── agents/openai.yaml       Codex interface metadata
 ├── assets/                  Reusable control-board and report templates
-├── references/              Question bank, design, trust, and source map
+├── references/              Question bank, design, trust, business case, and source map
 └── scripts/ab_math.py       Dependency-free transparent calculations
 ```
 

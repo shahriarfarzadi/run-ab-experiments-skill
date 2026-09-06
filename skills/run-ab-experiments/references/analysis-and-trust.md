@@ -16,6 +16,7 @@ validation. It distills the analysis guidance in Kohavi, Tang, and Xu,
 - [Triggered analysis](#triggered-analysis)
 - [Segments and time](#segments-and-time)
 - [Interference and external validity](#interference-and-external-validity)
+- [Business-case handoff](#business-case-handoff)
 - [Decision classification](#decision-classification)
 - [Diagnostic checklist](#diagnostic-checklist)
 
@@ -35,7 +36,9 @@ Use this sequence:
 8. Apply the pre-specified stopping and multiple-testing methods.
 9. Compare intervals with practical thresholds and organizational guardrails.
 10. Inspect time and pre-treatment segments for explanation and generalization.
-11. Classify the decision and record limitations.
+11. When the decision depends on scaled value, cost, capacity, or rollout
+    scenarios, build the business case from the trustworthy causal estimate.
+12. Classify the decision and record limitations.
 
 ## SRM gate
 
@@ -289,6 +292,27 @@ long-running experiment, stable cohort, post-period analysis, time-staggered
 treatments, holdback, or reverse experiment. Each has assumptions and an
 opportunity cost.
 
+## Business-case handoff
+
+Statistical significance is not a rollout decision. After validity passes and
+the causal effect is estimated, read
+[business-case.md](business-case.md) when the decision depends on scaled impact,
+costs, capacity, opportunity cost, or alternative rollout policies.
+
+Keep two uncertainty layers visible:
+
+- uncertainty in the causal effect from the experiment;
+- uncertainty in operating volumes, adoption, persistence, value, cost,
+  displacement, and external validity.
+
+Use the absolute effect with a compatible target population and time window.
+Do not turn a unit-level outcome into a different entity such as an event or
+transaction without an observed or approved mapping. Show both the absolute
+value of each scenario and its incremental value versus the named baseline.
+If business inputs are unavailable, state which inputs are missing and classify
+the decision as inconclusive when their plausible range crosses the action
+threshold.
+
 ## Decision classification
 
 Compare the confidence interval with zero and with the predeclared practical
@@ -325,5 +349,8 @@ the predeclared practical threshold, but it is not evidence that treatment works
 - [ ] Triggered effects are translated correctly to overall effects.
 - [ ] Segment and time findings are labeled confirmatory or exploratory.
 - [ ] Practical thresholds and every guardrail are included in the decision.
+- [ ] Any required business case preserves units, reconciles scenarios, and
+      separates absolute value from incremental value versus baseline.
+- [ ] Causal uncertainty and business-input uncertainty are shown separately.
 - [ ] Generalization and long-term assumptions are explicit.
 - [ ] Surprising findings have a verification or replication plan.
