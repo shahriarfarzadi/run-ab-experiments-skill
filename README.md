@@ -20,7 +20,8 @@ assumptions visible before they can silently determine the answer.
 
 The workflow enforces six behaviors:
 
-1. Ask high-impact questions before planning or analysis.
+1. Read supplied context first, then ask three high-impact questions before
+   planning or analysis; stage supplementary questions only when needed.
 2. Confirm a context-and-assumptions register before work starts.
 3. Separate design, live-operation, inference, and business decisions.
 4. Check trust failures such as sample ratio mismatch before reading outcomes.

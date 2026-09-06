@@ -47,32 +47,37 @@ Treat context discovery as a hard validity gate. Apply this protocol to every
 task, including apparently complete requests and requests containing results,
 queries, dashboards, or datasets.
 
-### Phase A: Interview before work
+### Phase A: Read context, then interview
 
-1. Do not plan, calculate, recommend metrics, inspect outcome data, run queries,
-   interpret results, or give a provisional decision yet.
-2. Classify the request as **plan**, **manage/intervene**, **interpret/analyze**,
+1. First read all context the user has already supplied, including pasted text,
+   named files, attachments, and explicitly provided links. This is read-only
+   orientation: do not infer missing facts or turn context into recommendations.
+2. Do not plan, calculate, recommend metrics, inspect additional outcome data,
+   run queries, interpret results, or give a provisional decision yet.
+3. Classify the request as **plan**, **manage/intervene**, **interpret/analyze**,
    platform/method audit, or ambiguous.
-3. Read
+4. Read
    [references/discovery-question-bank.md](references/discovery-question-bank.md).
-4. In the first response:
+5. In the first response:
    - restate the intended decision in one tentative sentence;
    - add a brief, calming orientation that says why context comes first and
      that short answers or `unknown` are acceptable;
-   - ask 12–20 numbered, high-impact questions from the relevant question bank,
-     grouped under no more than five short headings;
-   - mark no more than seven questions as needed for the current gate; label the
-     rest as “answer if known” so their presence does not imply equal urgency;
+   - ask exactly **three** numbered, high-impact questions from the relevant
+     question bank, grouped under no more than three short headings;
+   - make the three questions cover the decision, the population/experience,
+     and the most consequential validity or risk unknown for this request;
    - cover hidden causal, product, operational, statistical, data-quality,
      ethical, and decision assumptions;
    - ask the user to answer `unknown` when information is unavailable;
    - do not include analysis, a proposed design, calculations, or conclusions.
-5. When the initial prompt is already detailed, do not repeat answered
-   questions. Ask at least five respectful stress-test or gap questions that
-   could still reverse the design or interpretation.
-6. Do not open external links, query systems, or execute analysis tools before
-   the user answers. You may acknowledge filenames or artifacts already
-   provided without interpreting their contents.
+6. After the user answers, ask only the smallest next batch of supplementary
+   questions needed to resolve a material gap or contradiction. Usually ask
+   one to three at a time; never dump the remaining question bank in one turn.
+   Do not repeat answered questions. Detailed prompts still receive staged
+   stress-tests, not a large first-round questionnaire.
+7. Do not query systems, execute analysis tools, or inspect additional artifacts
+   that were not supplied before the user answers. Reading supplied context is
+   allowed; interpreting it remains gated until confirmation.
 
 ### Phase B: Confirm context and assumptions
 
